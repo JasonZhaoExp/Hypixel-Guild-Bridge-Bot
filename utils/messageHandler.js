@@ -26,7 +26,16 @@ function handleDiscordMessage(minecraftBot, message) {
 }
 
 function sanitizeMessage(message) {
-  const naughtyWords = ['badword1', 'badword2']; // Add more as needed
+    const naughtyWords = [
+        "fuck", "shit", "sex", "cum", "piss", "dick", 
+        "asshole", "bitch", "cunt", "whore", "retard", 
+        "nigger", "faggot", "dyke", "kill yourself", 
+        "rape", "suicide", "nazi", "hitler", "fat", 
+        "ugly", "nigga", "pussy", "cock", "nipple", 
+        "boob", "semen", "porn", "anal", "twat", 
+        "balls", "chink", "spic", "wetback", "terrorist", 
+        "isis", "pedophile", "molest", "incest", "groomer"
+    ]
   let sanitized = message;
   naughtyWords.forEach((word) => {
     const regex = new RegExp(`\\b${word}\\b`, 'gi');
